@@ -8,6 +8,10 @@
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
     <link href="./style.css" rel="stylesheet">
+    
+    <!-- Botpress Webchat v3.4 SDK -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/06/15/20250506153427-V2JQXLMN.js" defer></script>
 </head>
 
 <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
@@ -625,14 +629,9 @@
                                             <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
                                                 <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px]"></div>
                                             </div>
-                                            <!-- Botpress Chat iframe -->
+                                            <!-- Botpress Chat Container -->
                                             <div class="relative w-full" style="aspect-ratio: 9/16; min-height: 600px;">
-                                                <iframe 
-                                                    src="https://cdn.botpress.cloud/webchat/v3.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/06/15/20250506153427-MY6191NK.json" 
-                                                    class="w-full h-full"
-                                                    style="border: none; border-radius: inherit;"
-                                                    title="LINA Live Chat">
-                                                </iframe>
+                                                <div id="lina-chat-container" class="w-full h-full"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1672,6 +1671,33 @@
     <script src="./js/vendors/aos.js"></script>
     <script src="./js/vendors/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    
+    <!-- Botpress Webchat Initialization -->
+    <script>
+        window.addEventListener('load', function() {
+            // Wait for Botpress SDK to load
+            const initBotpress = setInterval(function() {
+                if (window.botpress) {
+                    clearInterval(initBotpress);
+                    
+                    // Initialize and open chat immediately
+                    window.botpress.init({
+                        hideWidget: true,
+                        showConversationsButton: false,
+                        showCloseButton: false,
+                        showPoweredBy: false
+                    });
+                    
+                    // Open chat immediately
+                    setTimeout(function() {
+                        if (window.botpress.sendEvent) {
+                            window.botpress.sendEvent({ type: 'show' });
+                        }
+                    }, 500);
+                }
+            }, 100);
+        });
+    </script>
 
 </body>
 
