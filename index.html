@@ -8,6 +8,10 @@
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
     <link href="./style.css" rel="stylesheet">
+    
+    <!-- Botpress Webchat v3.4 -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/06/15/20250506153427-V2JQXLMN.js" defer></script>
 </head>
 
 <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
@@ -625,15 +629,9 @@
                                             <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
                                                 <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px]"></div>
                                             </div>
-                                            <!-- Botpress Chat iframe -->
+                                            <!-- Botpress Embedded Webchat -->
                                             <div class="relative w-full" style="aspect-ratio: 9/16; min-height: 600px;">
-                                                <iframe 
-                                                    src="https://cdn.botpress.cloud/webchat/v3.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/06/15/20250506153427-V2JQXLMN.json" 
-                                                    class="w-full h-full"
-                                                    style="border: none; border-radius: inherit;"
-                                                    title="LINA Live Chat"
-                                                    allow="microphone">
-                                                </iframe>
+                                                <div id="bp-embedded-webchat" class="w-full h-full"></div>
                                             </div>
                                         </div>
                                     </div>
