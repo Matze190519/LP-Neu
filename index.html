@@ -12,6 +12,32 @@
     <!-- Botpress Webchat v3.4 -->
     <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/05/06/15/20250506153427-V2JQXLMN.js" defer></script>
+    
+    <!-- Mobile Navigation Fix -->
+    <style>
+        /* Force mobile menu to work correctly */
+        @media (max-width: 767px) {
+            /* Hide desktop navigation on mobile */
+            nav.hidden.md\:flex {
+                display: none !important;
+            }
+            /* Show mobile menu button on mobile */
+            .md\:hidden {
+                display: flex !important;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            /* Show desktop navigation on desktop */
+            nav.hidden.md\:flex {
+                display: flex !important;
+            }
+            /* Hide mobile menu button on desktop */
+            div.md\:hidden {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
@@ -310,7 +336,7 @@
                 </div>
             </section>
             <!-- Features -->
-            <section>
+            <section id="lina">
                 <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
 
                     <!-- Illustration -->
@@ -533,16 +559,14 @@
                     <div class="absolute inset-0 -z-10" aria-hidden="true">
                         <canvas data-particle-animation data-particle-quantity="6" data-particle-staticity="30"></canvas>
                     </div>
-                </div>
-
+              <section id="boni" class="relative">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="pt-16 md:pt-32">
 
                         <!-- Section header -->
                         <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
                             <div>
-                                <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">LR FAST TRACK</div>
-                            </div>
+                                <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">LR FAST TRACK</div>            </div>
                             <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Starte JETZT, nicht „irgendwann“</h2>
                             <p class="text-lg text-slate-400">Steig direkt im ersten Monat ins Fast-Track-Programm ein, sichere dir garantierte Bonus-Stufen* und nutze den direkten Weg zu Karriere, Firmenwagen* und mehr Freiheit.</p>
                         </div>
@@ -735,7 +759,7 @@
             <!-- Live Chat mit LINA Section -->
 
             <!-- Testimonials carousel -->
-            <section>    
+            <section id="autokonzept">    
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="pt-12 md:pt-20">
             
@@ -1468,8 +1492,8 @@
         <a 
             href="https://wa.me/4915234567890?text=Hallo!%20Ich%20interessiere%20mich%20für%20LR%20und%20möchte%20mehr%20Infos." 
             target="_blank"
-            class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full transition-all duration-300 group hover:scale-110"
-            style="box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);"
+            class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full transition-all duration-300 group hover:scale-110"
+            style="position: fixed; bottom: 24px; right: 24px; z-index: 9999; box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);"
             aria-label="WhatsApp kontaktieren"
         >
             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
