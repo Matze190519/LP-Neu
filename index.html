@@ -1231,8 +1231,11 @@
 
                         <!-- Contact Form -->
                         <div class="max-w-xl mx-auto">
-                            <form id="contactForm" name="lr-kontakt" action="https://formspree.io/f/xnnqbpzg" method="POST" class="space-y-4">
-                                <input type="hidden" name="form-name" value="lr-kontakt" />
+                            <form id="contactForm" name="lr-kontakt" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                                <input type="hidden" name="access_key" value="8c5e4f3d-9b2a-4e1c-8f7d-6a3b5c2e1f9a" />
+                                <input type="hidden" name="subject" value="Neuer Lead von LR Landing Page" />
+                                <input type="hidden" name="from_name" value="LR Lifestyle Funnel" />
+                                <input type="hidden" name="redirect" value="https://lrlifestyle.pro/danke.html" />
                                 <!-- Honeypot field for spam protection -->
                                 <p style="display:none;">
                                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
