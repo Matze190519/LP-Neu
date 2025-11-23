@@ -1231,7 +1231,7 @@
 
                         <!-- Contact Form -->
                         <div class="max-w-xl mx-auto">
-                            <form id="contactForm" name="lr-kontakt" method="POST" data-netlify="true" data-netlify-redirect="/danke.html" netlify-honeypot="bot-field" class="space-y-4">
+                            <form id="contactForm" name="lr-kontakt" class="space-y-4">
                                 <input type="hidden" name="form-name" value="lr-kontakt" />
                                 <!-- Honeypot field for spam protection -->
                                 <p style="display:none;">
@@ -1343,18 +1343,22 @@
             </section>
 
             <script>
-            // Netlify Forms handling with redirect
+            // Form handling with direct redirect
             document.getElementById('contactForm').addEventListener('submit', function(e) {
-                // Don't prevent default - let Netlify handle the form
-                // Form will be submitted to Netlify, then redirect to /danke.html
+                e.preventDefault();
                 
-                // Meta Pixel Lead Event (fires before form submission)
+                // Meta Pixel Lead Event
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead', {
                         source: 'LP_Formular',
                         content_name: 'Kontaktformular'
                     });
                 }
+                
+                // Redirect to thank you page
+                setTimeout(function() {
+                    window.location.href = '/danke.html';
+                }, 500);
             });
             </script>
         <!-- Site footer -->
