@@ -1354,9 +1354,8 @@
                 // Log to console (replace with actual API call)
                 console.log('Form submitted:', formData);
                 
-                // Show success message
-                document.getElementById('contactForm').classList.add('hidden');
-                document.getElementById('successMessage').classList.remove('hidden');
+                // Redirect to thank you page
+                window.location.href = '/danke.html';
                 
                 // TODO: Send to backend/email service
                 // Example: fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
@@ -1398,9 +1397,9 @@
                             &copy; 2025 Online Network Vision S.L. Alle Rechte vorbehalten.
                         </div>
                         <div class="flex space-x-6">
-                            <a href="#0" class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out">Impressum</a>
-                            <a href="#0" class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out">Datenschutz</a>
-                            <a href="#0" class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out">AGB</a>
+                            <a href="/impressum.html" class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out">Impressum</a>
+                            <a href="/datenschutz.html" class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out">Datenschutz</a>
+                            <a href="/agb.html" class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out">AGB</a>
                         </div>
                     </div>
                 </div>

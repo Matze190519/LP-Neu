@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vielen Dank! | LR Lifestyle Team</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '677297092936141');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead', {
+        source: 'Danke_Seite',
+        content_name: 'Formular abgeschlossen'
+    });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=677297092936141&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full text-center">
+        <!-- Success Icon -->
+        <div class="mb-8">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Geschafft! 🎉
+        </h1>
+        
+        <p class="text-xl text-slate-300 mb-4">
+            <strong class="text-white">Dein Info-Paket ist unterwegs!</strong>
+        </p>
+        
+        <p class="text-lg text-slate-400 mb-12">
+            Mathias meldet sich innerhalb von <strong class="text-purple-400">24 Stunden</strong> bei dir.<br>
+            In der Zwischenzeit kannst du schon mal reinschnuppern:
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="space-y-4 mb-12">
+            <a href="https://wa.me/4917150600008?text=Hi%20Mathias%2C%20ich%20habe%20gerade%20das%20Formular%20ausgef%C3%BCllt%20und%20m%C3%B6chte%20mehr%20erfahren!" 
+               class="block w-full md:w-auto md:inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold px-8 py-4 rounded-lg hover:from-purple-600 hover:to-indigo-600 transition duration-300 shadow-lg"
+               onclick="if(window.fbq){fbq('trackCustom','WhatsAppKontakt_Danke',{source:'Danke_Seite'});}">
+                💬 Direkt mit Mathias chatten
+            </a>
+            
+            <a href="/#fast-track" 
+               class="block w-full md:w-auto md:inline-block bg-slate-800/50 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-lg border border-slate-700 hover:border-purple-500/50 transition duration-300">
+                🚀 Fast Track Bonus anschauen
+            </a>
+            
+            <a href="/#autokonzept" 
+               class="block w-full md:w-auto md:inline-block bg-slate-800/50 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-lg border border-slate-700 hover:border-purple-500/50 transition duration-300">
+                🚗 Autokonzept Video ansehen
+            </a>
+        </div>
+        
+        <!-- Social Proof -->
+        <div class="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+            <p class="text-slate-300 text-sm mb-2">
+                ✓ Über <strong class="text-white">2.000 Partner</strong> sind bereits gestartet
+            </p>
+            <p class="text-slate-300 text-sm mb-2">
+                ✓ Durchschnittliche Antwortzeit: <strong class="text-white">4 Stunden</strong>
+            </p>
+            <p class="text-slate-300 text-sm">
+                ✓ <strong class="text-white">100% kostenlos</strong> & unverbindlich
+            </p>
+        </div>
+        
+        <!-- Back Link -->
+        <div class="mt-12">
+            <a href="/" class="text-slate-400 hover:text-purple-400 transition duration-300">
+                ← Zurück zur Startseite
+            </a>
+        </div>
+    </div>
+</body>
+</html>
