@@ -1370,20 +1370,19 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center" x-data="footerCarousel">
             <!-- Profile Image with Glow -->
-            <div class="relative h-32 mb-8">
+            <div class="flex justify-center mb-8">
                 <template x-for="(item, index) in items" :key="index">
                     <div
                         x-show="active === index"
-                        class="absolute top-0 left-1/2 -translate-x-1/2"
                         x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
                         x-transition:enter-start="opacity-0 -rotate-[60deg]"
                         x-transition:enter-end="opacity-100 rotate-0"
-                        x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
+                        x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute"
                         x-transition:leave-start="opacity-100 rotate-0"
                         x-transition:leave-end="opacity-0 rotate-[60deg]"
                     >
-                        <div class="w-20 h-20 rounded-full overflow-hidden">
-                            <img :src="item.img" :alt="item.name" class="w-full h-full object-cover" style="object-position: center 60%;">
+                        <div class="w-32 h-32">
+                            <img :src="item.img" :alt="item.name" class="w-full h-full">
                         </div>
                     </div>
                 </template>
@@ -1497,7 +1496,7 @@ document.addEventListener('alpine:init', () => {
         autorotateTiming: 7000,
         items: [
             {
-                img: './images/mathias-new.webp',
+                img: './images/mathias-round.png',
                 name: 'Mathias Vinzing',
                 title: 'LR Platin Orgaleiter',
                 text: 'Als dein persönlicher Coach begleite ich dich auf deinem Weg – mit bewährten Strategien, individueller Unterstützung und einem klaren Plan für deinen Erfolg.',
@@ -1506,7 +1505,7 @@ document.addEventListener('alpine:init', () => {
                 imgPosition: 'center 40%'
             },
             {
-                img: './images/lina-person.webp',
+                img: './images/lina-round.png',
                 name: 'LINA',
                 title: 'KI-Partnerin',
                 text: 'Deine KI-Assistentin für Posts, Training und Vertrieb. Content in Sekunden. 24/7 verfügbar.',
