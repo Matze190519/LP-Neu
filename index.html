@@ -1371,25 +1371,29 @@
                 <div class="py-16 border-t border-purple-500/20">
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
                         <!-- Profile Image -->
-                        <div class="flex-shrink-0">
-                            <img src="./images/mathias-vinzing.png" alt="Mathias Vinzing" class="w-40 h-40 rounded-2xl object-cover border-4 border-purple-500/40 shadow-2xl shadow-purple-500/20">
+                        <div class="flex-shrink-0 relative">
+                            <!-- Glow Effect -->
+                            <div class="absolute inset-0 bg-purple-500/30 rounded-2xl blur-2xl"></div>
+                            <img src="./images/mathias-vinzing.png" alt="Mathias Vinzing" class="relative w-40 h-40 rounded-2xl object-cover border-4 border-purple-500/60 shadow-2xl shadow-purple-500/50">
                         </div>
                         
                         <!-- Content -->
                         <div class="flex-1 text-center md:text-left">
                             <h3 class="text-3xl font-bold text-white mb-2">Mathias Vinzing</h3>
-                            <p class="text-xl text-purple-400 font-semibold mb-4">Platin Orgaleiter</p>
+                            <p class="text-xl text-purple-400 font-semibold mb-4">LR Platin Orgaleiter</p>
                             <p class="text-lg text-slate-300 mb-6 max-w-2xl leading-relaxed">
-                                Herzlich willkommen im LR Lifestyle Team! Erfahre wie du nebenberuflich oder sogar hauptberuflich erfolgreich durchstarten kannst.
+                                Ich zeige dir den Weg. Als dein persönlicher Coach stehe ich dir zur Seite – von Tag 1 an bis zu deinem eigenen erfolgreichen Team.
                             </p>
                             
                             <!-- Video Link -->
                             <a href="https://youtu.be/fGd5jwI1EJo" target="_blank" rel="noopener noreferrer" 
-                               class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 mb-6 shadow-lg">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                                </svg>
-                                <span>Meine LR Geschichte</span>
+                               class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-6 py-4 rounded-xl transition duration-300 mb-6 shadow-xl hover:shadow-2xl group">
+                                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-lg">Meine LR Geschichte</span>
                             </a>
                             
                             <!-- Social -->
