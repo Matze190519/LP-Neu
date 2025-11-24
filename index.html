@@ -1370,23 +1370,20 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center" x-data="footerCarousel">
             <!-- Profile Image with Glow -->
-            <div class="relative h-32 mb-8">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-[200px] pointer-events-none" style="z-index: -1;">
-                    <!-- Glow effect -->
-                    <div class="absolute inset-0 rounded-full blur-[120px]" style="background: radial-gradient(circle, rgba(168, 85, 247, 0.6) 0%, rgba(168, 85, 247, 0.3) 50%, transparent 100%);"></div>
-                    <!-- Image container -->
+            <div class="relative h-32 [mask-image:linear-gradient(0deg,transparent,theme(colors.white)_40%,theme(colors.white))]">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] -z-10 pointer-events-none before:rounded-full rounded-full before:absolute before:inset-0 before:bg-gradient-to-b before:from-purple-400/20 before:to-transparent before:to-20% after:rounded-full after:absolute after:inset-0 after:bg-slate-900 after:m-px before:-z-20 after:-z-20">
                     <template x-for="(item, index) in items" :key="index">
                         <div
                             x-show="active === index"
                             class="absolute inset-0 -z-10"
-                            x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
+                            x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
                             x-transition:enter-start="opacity-0 -rotate-[60deg]"
                             x-transition:enter-end="opacity-100 rotate-0"
                             x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
                             x-transition:leave-start="opacity-100 rotate-0"
                             x-transition:leave-end="opacity-0 rotate-[60deg]"
                         >
-                            <div class="relative top-16 left-1/2 -translate-x-1/2 w-[73px] h-[73px] rounded-full overflow-hidden">
+                            <div class="relative top-11 left-1/2 -translate-x-1/2 w-[73px] h-[73px] rounded-full overflow-hidden">
                                 <img :src="item.img" :alt="item.name" class="w-full h-full object-cover" :style="'object-position: ' + item.imgPosition">
                             </div>
                         </div>
