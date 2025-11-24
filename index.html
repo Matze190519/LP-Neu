@@ -1383,7 +1383,7 @@
                         x-transition:leave-end="opacity-0 rotate-[60deg]"
                     >
                         <div class="w-20 h-20 rounded-full overflow-hidden">
-                            <img :src="item.img" :alt="item.name" class="w-full h-full object-cover" style="object-position: center 20%;">
+                            <img :src="item.img" :alt="item.name" class="w-full h-full object-cover" :style="'object-position: ' + item.imgPosition">
                         </div>
                     </div>
                 </template>
@@ -1503,7 +1503,7 @@ document.addEventListener('alpine:init', () => {
                 text: 'Als dein persönlicher Coach begleite ich dich auf deinem Weg – mit bewährten Strategien, individueller Unterstützung und einem klaren Plan für deinen Erfolg.',
                 button: 'Meine LR Geschichte',
                 link: 'https://youtu.be/IRwjCKKovKo',
-                imgPosition: 'center 25%'
+                imgPosition: 'center 40%'
             },
             {
                 img: './images/lina-person.webp',
