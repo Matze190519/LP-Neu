@@ -1387,7 +1387,7 @@
                             x-transition:leave-end="opacity-0 rotate-[60deg]"
                         >
                             <div class="relative top-11 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full overflow-hidden">
-                                <img :src="item.img" :alt="item.name" class="w-full h-full object-cover" style="object-position: center 25%;">
+                                <img :src="item.img" :alt="item.name" class="w-full h-full object-cover" :style="'object-position: ' + item.imgPosition">
                             </div>
                         </div>
                     </template>
@@ -1507,7 +1507,8 @@ document.addEventListener('alpine:init', () => {
                 title: 'LR Platin Orgaleiter',
                 text: 'Als dein persönlicher Coach begleite ich dich auf deinem Weg – mit bewährten Strategien, individueller Unterstützung und einem klaren Plan für deinen Erfolg.',
                 button: 'Meine LR Geschichte',
-                link: 'https://youtu.be/IRwjCKKovKo'
+                link: 'https://youtu.be/IRwjCKKovKo',
+                imgPosition: 'center 25%'
             },
             {
                 img: './images/lina-person.webp',
@@ -1515,7 +1516,8 @@ document.addEventListener('alpine:init', () => {
                 title: 'KI-Partnerin',
                 text: 'Deine KI-Assistentin für Posts, Training und Vertrieb. Content in Sekunden. 24/7 verfügbar.',
                 button: 'Chat mit LINA',
-                link: '#lina'
+                link: '#lina',
+                imgPosition: 'center 35%'
             },
             {
                 img: './images/lr-logo.png',
@@ -1523,7 +1525,8 @@ document.addEventListener('alpine:init', () => {
                 title: 'Löwenstarkes Team',
                 text: 'Werde Teil unseres erfolgreichen Teams und starte deine LR-Karriere mit professioneller Unterstützung.',
                 button: 'Infos anfordern',
-                link: '#jetzt-starten'
+                link: '#jetzt-starten',
+                imgPosition: 'center center'
             }
         ],
         init() {
