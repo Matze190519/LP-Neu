@@ -1371,9 +1371,9 @@
         <div class="text-center" x-data="footerCarousel">
             <!-- Profile Image with Glow -->
             <div class="relative h-32 mb-8">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] -z-10 pointer-events-none">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] pointer-events-none" style="z-index: -1;">
                     <!-- Glow effect -->
-                    <div class="absolute inset-0 rounded-full bg-purple-500/20 blur-[100px]"></div>
+                    <div class="absolute inset-0 rounded-full blur-[120px]" style="background: radial-gradient(circle, rgba(168, 85, 247, 0.6) 0%, rgba(168, 85, 247, 0.3) 50%, transparent 100%);"></div>
                     <!-- Image container -->
                     <template x-for="(item, index) in items" :key="index">
                         <div
@@ -1386,7 +1386,7 @@
                             x-transition:leave-start="opacity-100 rotate-0"
                             x-transition:leave-end="opacity-0 rotate-[60deg]"
                         >
-                            <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="160" height="160" :alt="item.name" style="object-fit: cover;">
+                            <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="160" height="160" :alt="item.name" style="object-fit: cover; z-index: 10;">
                         </div>
                     </template>
                 </div>
