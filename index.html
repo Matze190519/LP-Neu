@@ -1386,7 +1386,9 @@
                             x-transition:leave-start="opacity-100 rotate-0"
                             x-transition:leave-end="opacity-0 rotate-[60deg]"
                         >
-                            <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="160" height="160" :alt="item.name" style="object-fit: cover; z-index: 10;">
+                            <div class="relative top-11 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden" style="z-index: 10;">
+                                <img :src="item.img" :alt="item.name" class="w-full h-full object-cover">
+                            </div>
                         </div>
                     </template>
                 </div>
